@@ -1,0 +1,160 @@
+\documentclass[11pt]{article}
+\usepackage{header}
+\def\title{HW 00}
+
+\begin{document}
+\maketitle
+\fontsize{12}{15}\selectfont
+
+\begin{center}
+    Due: Saturday, 8/26, 4:00 PM \\
+    Grace period until Saturday, 8/26, 6:00 PM \\
+\end{center}
+
+\section*{Sundry}
+Before you start writing your final homework submission, state briefly how you worked on it.  Who else did you work with?  List names and email addresses.  (In case of homework party, you can just describe the group.)
+
+\vspace{15pt}
+
+\Question{Administrivia}
+
+\begin{Parts}
+
+\Part Make sure you are on the course Ed (for Q\&A) and Gradescope (for submitting homeworks, including this one). Find and familiarize yourself with the course website. What is its homepage's URL?
+
+\begin{solution}
+    https://www.eecs70.org/
+\end{solution}
+
+\Part Read the policies page on the course website.
+	\begin{enumerate}[(i)]  
+		\item What is the breakdown of how your grade is calculated, for both the homework and the no-homework option?\\
+		\begin{solution}
+            5+5+20+35+45 and 6.25+6.25+31.25+56.25
+        \end{solution}
+        \item What is the attendance policy for discussions?
+        \\\begin{solution}
+            The form to sign up will be on Ed and attendance will be taken as part of your grade through a completely objective criteria. You will need to attend at least 13 sections to receive full credit for discussion attendance. You are welcome to attend other discussion sections, but your attendance will only be counted for the section you are assigned to.
+        \end{solution}
+		\item When are homeworks released and when are they due?
+		\\\begin{solution}
+            Homework for the coming week is released on Sunday. Homework is due on Gradescope the following Saturday at 4:00 pm (grace period until Saturday 6:00pm)
+        \end{solution}
+		\item How many "drops" do you get for homeworks? How many mini-vitamins will contribute to your grade?
+		\\\begin{solution}
+            lowest three homework and top 13 mini-vitamins    
+        \end{solution}
+        \item When is the midterm? When is the final?
+        \\\begin{solution}
+            10/12/23 Thursday 7-9pm and 12/12/23 Tuesday 3-6pm    
+        \end{solution}
+        \item What percentage score is needed to earn full credit on a homework?
+        \\\begin{solution}
+            73\%
+        \end{solution}
+    \end{enumerate}
+
+\end{Parts}
+
+
+
+\Question{Course Policies}
+
+Go to the course website and read the course policies carefully. Leave a followup on Ed if you have any questions. Are the following situations violations of course policy? Write "Yes" or "No", and a short explanation for each.
+
+\begin{Parts}
+  \Part Alice and Bob work on a problem in a study group. They write up a solution together and submit it, noting on their submissions that they wrote up their homework answers together. 
+  \begin{solution}
+    No
+\end{solution}
+  
+  \Part Carol goes to a homework party and listens to Dan describe his approach to a problem on the board, taking notes in the process. She writes up her homework submission from her notes, crediting Dan.
+  \begin{solution}
+    No
+\end{solution}
+  
+  \Part Erin comes across a proof that is part of a homework problem while studying course material. She reads it and then, after she has understood it, writes her own solution using the same approach. She submits the homework with a citation to the website.
+  \begin{solution}
+    Yes
+\end{solution}
+  
+  \Part Frank is having trouble with his homework and asks Grace for help. Grace lets Frank look at her written solution. Frank copies it onto his notebook and uses the copy to write and submit his homework, crediting Grace.
+  \begin{solution}
+    No
+\end{solution}
+  
+  \Part Heidi has completed her homework using \LaTeX. Her friend Irene has been working on a homework problem for hours, and asks Heidi for help. Heidi sends Irene her PDF solution, and Irene uses it to write her own solution with a citation to Heidi.
+  \begin{solution}
+    No
+\end{solution}
+  
+  \Part
+  Joe found homework solutions before they were officially released, and every time he got stuck, he looked at the solutions for a hint. He then cited the solutions as part of his submission.
+  \begin{solution}
+    No
+\end{solution}
+\end{Parts}
+
+\Question{Use of Ed}
+
+Ed is incredibly useful for Q\&A in such a large-scale class. We will use Ed for all important announcements. You should check it frequently. We also highly encourage you to use Ed to ask questions and answer questions from your fellow students.
+
+\begin{Parts}
+  
+    \Part Read the Ed Etiquette section of the course policies and explain what is wrong with the following hypothetical student question: "Can someone explain the proof of Theorem XYZ to me?" (Assume Theorem XYZ is a complicated concept.)
+    \begin{solution}
+        Ed is not OH. 5 minute-test
+    \end{solution}
+    \Part When are the weekly posts released? Are they required reading?
+    \begin{solution}
+        Mondays and YES
+    \end{solution}
+    \Part If you have a question or concern not directly related to the course content, where should you direct it?
+    \begin{solution}
+        Ed
+    \end{solution}
+\end{Parts}
+
+\Question{Academic Integrity}
+
+Please write or type out the following pledge in print, and sign it.
+
+\begin{quote}
+I pledge to uphold the university's honor code: to act with honesty, integrity, and respect for others, including their work. By signing, I ensure that all written homework I submit will be in my own words, that I will acknowledge any collaboration or help received, and that I will neither give nor receive help on any examinations. 
+\end{quote}
+\begin{solution}
+    Richard Lee
+\end{solution}
+\Question{Propositional Practice}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n1.pdf}{Note 1}}
+In parts (a)-(c), convert the English sentences into propositional logic. In parts (d)-(f), convert the propositions into English. In part (f), let $P(a)$ represent the proposition that $a$ is prime.
+\begin{Parts}
+
+\Part There is one and only one real solution to the equation $x^2 = 0$.
+\\\begin{solution}
+    $(\exists x \in \mathbb{R})\ ((x^2 = 0) \land (\forall y \in \mathbb{R})\ (y^2 = 0) \implies (x = y))$
+\end{solution}
+\Part Between any two distinct rational numbers, there is another rational number.
+\\\begin{solution}
+    $(\forall x,y \in \mathbb{Q})\ (x \not= y) \implies (\exists z \in \mathbb{Q})\ (x < z < y)$
+\end{solution}
+\Part If the square of an integer is greater than 4, that integer is greater than 2 or it is less than -2.
+\\\begin{solution}
+    $(\forall x \in \mathbb{Z})\ (x^2 > 4) \implies (x > 2 \lor x < -2)$
+\end{solution}
+\Part $(\forall x \in \mathbb{R})\ (x \in \mathbb{C})$
+\\\begin{solution}
+    Every real number is a complex number.
+\end{solution}
+\Part $(\forall x,y \in \mathbb{Z}) (x^2-y^2 \not=10)$
+\\\begin{solution}
+    The difference of the squares of any two integers is not 10.
+\end{solution}
+\Part $(\forall x \in \mathbb{N})\ \left[ \ (x > 1) \implies \ (\exists a, b \in \mathbb{N})  \ \left( (a + b = 2x)\land P(a) \land P(b) \right) \ \right]$
+\\\begin{solution}
+    Every natural number greater than 1 is the average of two primes.
+\end{solution}
+\end{Parts}
+
+\end{document}
