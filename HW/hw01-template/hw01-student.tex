@@ -1,0 +1,107 @@
+\documentclass[11pt]{article}
+\usepackage{header}
+\def\title{HW 01}
+
+\begin{document}
+\maketitle
+\fontsize{12}{15}\selectfont
+
+\begin{center}
+    Due: Saturday, 9/2, 4:00 PM \\
+    Grace period until Saturday, 9/2, 6:00 PM \\
+\end{center}
+
+\section*{Sundry}
+Before you start writing your final homework submission, state briefly how you worked on it.  Who else did you work with?  List names and email addresses.  (In case of homework party, you can just describe the group.)
+
+\vspace{15pt}
+
+\Question{Calculus Review}
+
+In the probability section of this course, you will be expected to compute derivatives, integrals, and double integrals. This question contains a couple examples of the kinds of calculus you will encounter.
+
+\begin{Parts}
+    \Part Compute the following integral:
+        \[
+            \int_0^{\infty} \sin(t)e^{-t} \dd{t}.
+        \]
+    
+    \Part Compute the values of $x \in (-2, 2)$ that correspond to local maxima and minima of the function
+    \[f(x) = \int_{0}^{x^2} t\cos(\sqrt{t}) \dd{t}.\]
+    Classify which $x$ correspond to local maxima and which to local minima.
+
+    \Part Compute the double integral
+    \[\iint_{R} 2x + y \dd{A},\]
+    where $R$ is the region bounded by the lines $x = 1$, $y = 0$, and $y = x$.
+
+\end{Parts}
+
+\Question{Logical Equivalence?}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n1.pdf}{Note 1}}
+Decide whether each of the following logical equivalences is correct and justify your answer. 
+
+\begin{Parts}
+    \Part $\forall x \; \left( P(x) \land Q(x) \right) \;\overset{?}{\equiv}\; \forall x \; P(x) \land \forall x \; Q(x)$
+    
+    \Part $\forall x \; \left( P(x) \lor Q(x) \right) \;\overset{?}{\equiv}\; \forall x \; P(x) \lor \forall x \; Q(x)$
+    
+    \Part $\exists x \; \left( P(x) \lor Q(x) \right) \;\overset{?}{\equiv}\; \exists x \; P(x) \lor \exists x \; Q(x)$
+    
+    \Part $\exists x \; \left( P(x) \land Q(x) \right) \;\overset{?}{\equiv}\; \exists x \; P(x) \land \exists x \; Q(x)$
+    
+\end{Parts}
+
+\Question{Equivalences with Quantifiers}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n1.pdf}{Note 1}}
+Evaluate whether the expressions on the left and right sides are equivalent in each part, and briefly justify your answers.
+
+\begin{Parts}
+    \Part $\forall x \exists y \left(P(x) \implies Q(x,y)\right) \;\overset{?}{\equiv}\; \forall x \left(P(x) \implies \exists y~Q(x,y)\right)$
+
+    \Part $\forall x \left((\exists y~Q(x,y)) \implies P(x)\right) \;\overset{?}{\equiv}\; \forall x \exists y \left(Q(x,y) \implies P(x)\right)$
+
+    \Part $\lnot \exists x \forall y \left(P(x,y) \implies \lnot Q(x,y)\right) \;\overset{?}{\equiv}\; \forall x \left( (\exists y~P(x,y)) \land (\exists y~Q(x,y)) \right)$
+\end{Parts}
+
+\Question{Prove or Disprove}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n2.pdf}{Note 2}}
+For each of the following, either prove the statement, or disprove by finding a counterexample.
+\begin{Parts}
+	\Part $(\forall n \in \mathbb{N})$ if $n$ is odd then $n^2 + 4n$ is odd.
+
+	\Part $(\forall a, b \in \mathbb{R})$ if $a + b \le 15$ then $a \le 11$ or $b \le 4$.
+
+	\Part $(\forall r \in \mathbb{R})$ if $r^2$ is irrational, then $r$ is irrational.
+
+	\Part $(\forall n \in \mathbb{Z}^+)$ $5n^3 > n!$. (Note: $\mathbb{Z}^+$ is the set of positive integers)
+
+    \Part The product of a non-zero rational number and an irrational number is irrational.
+\end{Parts}
+
+\Question{Twin Primes}
+
+\notelinks*{\href{https://www.eecs70.org/assets/pdf/notes/n2.pdf}{Note 2}}
+\begin{Parts}
+	\item Let $p > 3$ be a prime. Prove that $p$ is of the form $3k + 1$ or $3k-1$ for some integer $k$.
+
+	\item \textit{Twin primes} are pairs of prime numbers $p$ and $q$ that have a difference of 2. Use part (a) to prove that 5 is the only prime number that takes part in two different twin prime pairs.
+\end{Parts}
+
+\Question{Preserving Set Operations}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n0.pdf}{Note 0},\href{https://www.eecs70.org/assets/pdf/notes/n2.pdf}{Note 2}}
+For a function $f$, define the image of a set $X$ to be the set $f(X) = \{y~|~y = f(x) \text{ for some } x \in X\}$. Define the inverse image or preimage of a set $Y$ to be the set $f^{-1}(Y) = \{x~|~f(x) \in Y\}$. Prove the following statements, in which $A$ and $B$ are sets. By doing so, you will show that inverse images preserve set operations, but images typically do not.
+
+\textit{Recall: For sets $X$ and $Y$, $X=Y$ if and only if $X \subseteq Y \text{ and } Y \subseteq X$. To prove that $X \subseteq Y$, it is sufficient to show that $(\forall x)~((x \in X) \implies (x \in Y))$.}
+
+\begin{Parts}
+    \Part $f^{-1}(A \cap B) = f^{-1}(A) \cap f^{-1}(B)$.
+    \Part $f^{-1}(A \setminus B) = f^{-1}(A) \setminus f^{-1}(B)$.
+    \Part $f(A \cap B) \subseteq f(A) \cap f(B)$, and give an example where equality does not hold.
+    \Part $f(A \setminus B) \supseteq f(A) \setminus f(B)$, and give an example where equality does not hold.
+\end{Parts}
+
+\end{document}

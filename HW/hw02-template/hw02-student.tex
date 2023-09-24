@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+\usepackage{header}
+\def\title{HW 02}
+
+\begin{document}
+\maketitle
+\fontsize{12}{15}\selectfont
+
+\begin{center}
+    Due: Saturday, 9/9, 4:00 PM \\
+    Grace period until Saturday, 9/9, 6:00 PM \\
+\end{center}
+
+\section*{Sundry}
+Before you start writing your final homework submission, state briefly how you worked on it.  Who else did you work with?  List names and email addresses.  (In case of homework party, you can just describe the group.)
+
+\vspace{15pt}
+
+\Question{Airport}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n3.pdf}{Note 3}}
+Suppose that there are $2n+1$ airports, where $n$ is a positive integer. The distances between any two airports are all different. For each airport, exactly one airplane departs from it and is destined for the closest airport. Prove by induction that there is an airport which has no airplanes destined for it.
+
+\Question{Proving Inequality}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n3.pdf}{Note 3}}
+For all positive integers $n \ge 1$, prove with induction that
+\begin{align*}
+	\frac{1}{3^1}+\frac{1}{3^2}+ \hdots +\frac{1}{3^n} < \frac{1}{2}.
+\end{align*}
+(Note: while you can use formula for an infinite geometric series to prove this, we required you to use induction. Consider strengthening the inductive hypothesis. Can you prove an equality statement instead of an inequality?)
+
+\Question{AM-GM}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n3.pdf}{Note 3}}
+For nonnegative real numbers $a_1, \cdots, a_n$, the arithmetic mean, or average, is defined by
+\[\frac{a_1 + \cdots + a_n}{n},\]
+and the geometric mean is defined by
+\[\sqrt[n]{a_1\cdots a_n}.\]
+
+In this problem, we will prove the ``AM-GM" inequality. More precisely, for all positive integers $n \geq 2$, given any nonnegative real
+numbers $a_1, \cdots, a_n$, we will show that
+\[\frac{a_1 + \cdots + a_n}{n} \geq \sqrt[n]{a_1\cdots a_n}.\]
+
+We will do so by induction on $n$, but in an unusual way.
+\begin{Parts}
+\Part Prove that the inequality holds for $n = 2$. In other words, for nonnegative real numbers $a_1$ and $a_2$, show that
+\[\frac{a_1 + a_2}{2} \geq \sqrt{a_1a_2}.\]
+
+(This equation might be of use: $(\sqrt{a} - \sqrt{b})^2 = a - 2 \sqrt{ab} + b$)
+\Part For some positive integer $k$, suppose that the AM-GM inequality holds for $n = 2^k$. Show that the AM-GM inequality holds for $n = 2^{k+1}$. (Hint: Think
+about how the AM-GM inequality for $n = 2$ could be used here.)
+\Part For some positive integer $k \geq 2$, suppose that the AM-GM inequality holds for $n = k$. Show that the AM-GM inequality holds for $n = k - 1$. (Hint: In the AM-GM
+expression for $n = k$, consider substituting $a_k = \frac{a_1 + \cdots + a_{k-1}}{k-1}$.)
+\Part Argue why parts (a) - (c) imply that the AM-GM inequality holds for all positive integers $n \geq 2$.
+\end{Parts}
+
+\Question{A Coin Game}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n3.pdf}{Note 3}}
+Your "friend" Stanley Ford suggests you play the following game with him.  You each start with a single stack of $n$ coins.  On each of your turns, you select one of your stacks of coins (that has at least two coins) and split it into two stacks, each with at least one coin.  Your score for that turn is the product of the sizes of the two resulting stacks (for example, if you split a stack of 5 coins into a stack of 3 coins and a stack of 2 coins, your score would be $3 \cdot 2 = 6$).  You continue taking turns until all your stacks have only one coin in them.  Stan then plays the same game with his stack of $n$ coins, and whoever ends up with the largest total score over all their turns wins.
+
+Prove that no matter how you choose to split the stacks, your total score will always be $\frac{n(n - 1)}{2}$. (This means that you and Stan will end up with the same score no matter what happens, so the game is rather pointless.)
+
+\Question{Pairing Up}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n4.pdf}{Note 4}}
+Prove that for every even $n \geq 2$, there exists an instance of the stable matching problem with $n$ jobs and $n$ candidates such that the instance has at least $2^{n/2}$ distinct stable matchings.
+
+\Question{A Better Stable Pairing}
+
+\notelinks{\href{https://www.eecs70.org/assets/pdf/notes/n4.pdf}{Note 4}}
+In this problem we examine a simple way to \emph{merge} two different solutions to a stable matching problem. 
+Let $R$, $R'$ be two distinct stable pairings.  Define the new pairing $R \land R'$ as follows: 
+\begin{quote}
+    For every job $j$, $j$'s partner in $R \land R'$ is whichever is better (according to $j$'s preference list) of their partners in $R$ and $R'$.
+\end{quote}
+Also, we will say that a job/candidate \textit{prefers} a pairing $R$ to a pairing $R'$ if they prefers their partner in $R$ to their partner in $R'$.
+
+\begin{Parts}
+    \Part For this part only, consider the following example:
+
+    \begin{center}
+        \begin{tabular}{|c|c||c|c|}\hline
+            jobs & preferences & candidates & preferences \\\hline
+            $A$ & $1>2>3>4$ & $1$ & $D>C>B>A$ \\\hline
+            $B$ & $2>1>4>3$ & $2$ & $C>D>A>B$ \\\hline
+            $C$ & $3>4>1>2$ & $3$ & $B>A>D>C$ \\\hline
+            $D$ & $4>3>2>1$ & $4$ & $A>B>D>C$ \\\hline
+        \end{tabular}
+    \end{center}
+
+    $R=\{(A,4),(B,3),(C,1),(D,2)\}$ and $R'=\{(A,3),(B,4),(C,2),(D,1)\}$ are stable pairings for the example given above. Calculate $R \land R'$ and show that it is also stable.
+
+    \Part Prove that, for any pairings $R$ and $R'$, no job prefers $R$ or $R'$ to $R \land R'$.
+
+    \Part Prove that, for any stable pairings $R$ and $R'$ where $j$ and $c$ are partners in $R$ but not in $R'$, one of the following holds:
+    \begin{itemize}
+        \item $j$ prefers $R$ to $R'$ and $c$ prefers $R'$ to $R$; or
+        \item $j$ prefers $R'$ to $R$ and $c$ prefers $R$ to $R'$.
+    \end{itemize}
+
+    [\textit{Hint}: Let $J$ and $C$ denote the sets of jobs and candidates respectively that prefer $R$ to $R'$, and $J'$ and $C'$ the sets of jobs and candidates that prefer $R'$ to $R$.  Note that $|J|+|J'|=|C|+|C'|$. (Why is this?) Show that $|J| \leq |C'|$ and that $|J'| \leq |C|$.  Deduce that $|J'|=|C|$ and $|J|=|C'|$.  The claim should now follow quite easily.]
+
+    (You may assume this result in the next part even if you don't prove it here.)
+
+    \Part Prove an interesting result: for any stable pairings $R$ and $R'$, (i) $R \land R'$ is a pairing, and (ii) it is also stable.
+
+    [\textit{Hint}: for (i), use the results from part (c).]
+
+\end{Parts}
+
+\end{document}
